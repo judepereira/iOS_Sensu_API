@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewController">
+            <connections>
+                <outlet property="expirationSC" destination="0rN-hm-jOk" id="Ck8-1U-JUw"/>
+                <outlet property="popUpView" destination="xk6-Sr-sms" id="snq-g1-4kW"/>
+                <outlet property="reasonTF" destination="9bV-L2-aEn" id="CJI-J7-2v5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk6-Sr-sms">
+                    <rect key="frame" x="17" y="75" width="283" height="334"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXH-xU-J3d">
+                            <rect key="frame" x="13" y="257" width="99" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="4O3-ec-jCv"/>
+                            </constraints>
+                            <state key="normal" title="Submit" backgroundImage="stash_button">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="stash_sel"/>
+                            <connections>
+                                <action selector="closePopup:" destination="-1" eventType="touchUpInside" id="qFn-gI-kGC"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Stash" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="cv7-np-Eg9">
+                            <rect key="frame" x="20" y="32" width="243" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="fNr-Hb-sGI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.058823529409999999" green="0.48627450979999998" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0rN-hm-jOk">
+                            <rect key="frame" x="1" y="181" width="279" height="29"/>
+                            <segments>
+                                <segment title="15 min"/>
+                                <segment title="1 Hour"/>
+                                <segment title="24 Hours"/>
+                                <segment title="No EXP"/>
+                            </segments>
+                            <connections>
+                                <action selector="valueChanged:" destination="-1" eventType="valueChanged" id="BnA-Jy-YM5"/>
+                            </connections>
+                        </segmentedControl>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter stash reason" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bV-L2-aEn">
+                            <rect key="frame" x="8" y="137" width="267" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="mjt-yy-cZB"/>
+                            </connections>
+                        </textField>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-GA-f6D">
+                            <rect key="frame" x="13" y="100" width="99" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="MXC-gA-k9W"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.058823529409999999" green="0.48627450979999998" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-qr-zhE">
+                            <rect key="frame" x="164" y="257" width="99" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="uAq-YO-57E"/>
+                            </constraints>
+                            <state key="normal" title="Cancel" backgroundImage="stash_button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="stash_sel"/>
+                            <connections>
+                                <action selector="cancel:" destination="-1" eventType="touchUpInside" id="3D1-pM-v52"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="a3d-GA-f6D" firstAttribute="leading" secondItem="xk6-Sr-sms" secondAttribute="leading" constant="13" id="00q-7J-ewC"/>
+                        <constraint firstAttribute="trailing" secondItem="9bV-L2-aEn" secondAttribute="trailing" constant="8" id="4Bt-vJ-YPe"/>
+                        <constraint firstItem="a3d-GA-f6D" firstAttribute="top" secondItem="cv7-np-Eg9" secondAttribute="bottom" constant="8" id="5so-tK-FuT"/>
+                        <constraint firstAttribute="trailing" secondItem="Pdi-qr-zhE" secondAttribute="trailing" constant="20" id="Cgi-Ns-KLA"/>
+                        <constraint firstAttribute="bottom" secondItem="NXH-xU-J3d" secondAttribute="bottom" constant="43" id="Dyc-0W-JlN"/>
+                        <constraint firstAttribute="trailing" secondItem="cv7-np-Eg9" secondAttribute="trailing" constant="20" symbolic="YES" id="GAn-X9-Nvf"/>
+                        <constraint firstAttribute="trailing" secondItem="NXH-xU-J3d" secondAttribute="trailing" constant="171" id="Hxf-UJ-EbH"/>
+                        <constraint firstItem="cv7-np-Eg9" firstAttribute="top" secondItem="xk6-Sr-sms" secondAttribute="top" constant="32" id="Tec-o1-AYL"/>
+                        <constraint firstAttribute="bottom" secondItem="Pdi-qr-zhE" secondAttribute="bottom" constant="43" id="ZhN-3V-QMP"/>
+                        <constraint firstAttribute="trailing" secondItem="a3d-GA-f6D" secondAttribute="trailing" constant="171" id="bf6-S9-ybk"/>
+                        <constraint firstItem="0rN-hm-jOk" firstAttribute="top" secondItem="9bV-L2-aEn" secondAttribute="bottom" constant="14" id="dgV-sh-u4U"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NXH-xU-J3d" secondAttribute="bottom" constant="20" id="e9z-W9-D3d"/>
+                        <constraint firstItem="0rN-hm-jOk" firstAttribute="leading" secondItem="xk6-Sr-sms" secondAttribute="leading" constant="1" id="k3m-28-60p"/>
+                        <constraint firstItem="NXH-xU-J3d" firstAttribute="top" secondItem="0rN-hm-jOk" secondAttribute="bottom" constant="48" id="kNf-ZZ-RUz"/>
+                        <constraint firstItem="NXH-xU-J3d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xk6-Sr-sms" secondAttribute="leading" constant="13" id="nLF-5P-jZB"/>
+                        <constraint firstItem="NXH-xU-J3d" firstAttribute="leading" secondItem="xk6-Sr-sms" secondAttribute="leading" constant="13" id="rob-Ie-vO4"/>
+                        <constraint firstItem="9bV-L2-aEn" firstAttribute="top" secondItem="a3d-GA-f6D" secondAttribute="bottom" constant="8" id="tm5-EB-HtM"/>
+                        <constraint firstItem="cv7-np-Eg9" firstAttribute="leading" secondItem="xk6-Sr-sms" secondAttribute="leading" constant="20" symbolic="YES" id="u3K-qr-QiX"/>
+                        <constraint firstItem="Pdi-qr-zhE" firstAttribute="leading" secondItem="NXH-xU-J3d" secondAttribute="trailing" constant="52" id="vlG-ze-7N9"/>
+                        <constraint firstItem="9bV-L2-aEn" firstAttribute="leading" secondItem="xk6-Sr-sms" secondAttribute="leading" constant="8" id="y7T-LO-vaQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xk6-Sr-sms" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="PPz-kM-yFL"/>
+                <constraint firstAttribute="trailing" secondItem="xk6-Sr-sms" secondAttribute="trailing" constant="20" id="bms-VW-H50"/>
+                <constraint firstAttribute="bottom" secondItem="xk6-Sr-sms" secondAttribute="bottom" constant="159" id="iQT-kB-Whw"/>
+                <constraint firstItem="xk6-Sr-sms" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="tCP-yS-C1d"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="stash_button" width="168" height="41"/>
+        <image name="stash_sel" width="168" height="41"/>
+    </resources>
+</document>
